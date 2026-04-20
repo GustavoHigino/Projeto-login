@@ -1,0 +1,174 @@
+*{
+    padding: 0px;
+    box-sizing: border-box;
+    margin: 0px;
+}
+:root{
+    --cor-back-principal:#FCCB6F;
+    --corback-fraca:#ffdc9b;
+
+    --cor-back:#E19F41;
+    --cor-principal:#038BBB;
+    --cor-principal-mediana:#0a4e8f;
+    --cor-principal-forte:#010D23;
+    --cor-white:white;
+    --cor-black:black;
+}
+body,main,html{
+    height: 100%;
+    background-color: var(--cor-principal-mediana);
+}
+main{
+    position: relative;
+    height: 100%;
+    overflow: hidden; 
+    
+}
+section{
+    position: absolute;
+    inset: 0;
+    display: grid;
+    transform: translateX(100%);
+    transition: transform .6s ease;
+    visibility: hidden;
+    
+}
+section.ativo{
+    transform: translateX(0);
+    z-index: 2;
+    visibility: visible;
+}
+section.saindo{
+    transform: translateX(-100%);
+    z-index: 1;
+    
+    
+    
+}
+section.entrando{
+    transform: translateX(100%);
+    z-index: 3;
+}
+section#login{
+    
+    grid-template: auto 30px 250px 10%/10px auto 10px auto 10px;
+    height: 100%;
+    
+}
+section#criarlogin{
+    
+    grid-template: auto 30px min-content 20px/10px auto 10px auto 10px;
+    height: 100%;
+}
+
+article#imginicial {
+    background-image: url("../imagem/telainicial.png");
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    
+}
+article#imgcriar {
+    background-image: url("../imagem/imagemcriar2.png");
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    
+}
+
+article.imagem{
+    grid-area: 1/1/2/6;
+    background-color: var(--cor-principal-forte);
+    
+    border-radius: 0px 0px 50% 50%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.459);
+    
+}
+article#bemvindo{
+    grid-area: 2/2/3/5;
+    align-self: flex-end;
+    justify-self: center;
+    color: var(--cor-back);
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.651);
+}
+article#cadastrar{
+    grid-area: 2/2/3/5;
+    align-self: flex-end;
+    justify-self: center;
+    color: var(--cor-back);
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.651);
+}
+article#login1,article#cadastro{
+    grid-area: 3/2/4/5;
+    align-self: center;
+    justify-self: center;
+}
+article.formulario{
+    display: flex;
+    flex-flow: column;
+    max-width: 400px;
+    min-width: 100px;
+    width: 80%;
+    
+    background-color:var(--cor-back-principal);
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.445);
+    
+}
+label{
+    position: relative;
+}
+i{
+    position: absolute;
+    left: 2px;
+    top: 13px;
+    font-size: 25px;
+}
+input{
+    border-radius: 10px;
+    padding: 12px 0px 12px 35px ;
+    border: 1px solid black;
+    
+}
+button{
+    padding: 12px;
+    border-radius: 10px;
+    color: var(--cor-white);
+    font-size: 20px;
+    font-weight: bolder;
+    background-color:var(--cor-principal);
+    border: 0px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+button:hover{
+    background-color: var(--cor-principal-mediana);
+}
+b{
+    font-size: 20px;
+    padding: 10px;
+    font-weight: bolder;
+    text-align: center;
+    cursor: pointer;
+    color: var(--cor-black);
+    
+
+}
+b:hover{
+    background-color: var(--corback-fraca);
+    border-radius: 10px;
+    
+    transition: background-color .5s;
+}
+input,button,b{
+    margin: 5px 0px;
+}
+
+
