@@ -1,0 +1,39 @@
+section#login,section#criarlogin{
+    
+    grid-template: 2% auto auto auto/10px auto 4% 10% 450px 10%;
+    height: 100%;
+    
+    
+}
+article#login1{
+    grid-area: 3/5/4/6;
+    align-self: flex-start;
+    justify-self: center;
+    min-width: 450px;
+}
+article#cadastro{
+    grid-area: 3/4/4/6;
+    align-self: flex-start;
+    justify-self: center;
+    min-width: 500px;
+}
+article.imagem{
+    grid-area: 1/1/5/4;
+    background-color: var(--cor-principal-forte);
+    
+    
+    border-radius: 0px 0px 30% 0px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.459);
+    
+}
+article#bemvindo,article#cadastrar{
+    grid-area: 2/3/3/6;
+    align-self: self-end;
+    justify-self: center;
+    z-index: 2;
+    color: var(--cor-back);
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.651);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3vw;
+
+}

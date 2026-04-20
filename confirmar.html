@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validar o e-mail</title>
+</head>
+<body>
+    <h1>Parabens e-mail validado.</h1>
+    <script>
+        const params = new URLSearchParams(window.location.search)
+        const token = params.get("token");
+        fetch("https://localhost:7178/validToken",{method:"POST",headers:{"Content-Type": "application/json"},body:JSON.stringify({token:token})})
+        .then(r=>{
+            
+            if(r.ok){
+                document.body.innerHTML="EMAIL CONFIRMADO COM SUCESSO!"
+
+            }else{
+                document.body.innerHTML="TOKEN INVALIDO OU EXPIRADO"
+            }
+        })
+    </script>
+    
+</body>
+</html>
